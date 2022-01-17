@@ -45,11 +45,8 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   
   -- Color Scheme
-  use "lunarvim/darkplus.nvim"
   use 'folke/tokyonight.nvim'
-  use 'shaunsingh/nord.nvim'
   use 'olimorris/onedarkpro.nvim'
-  use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
 
 -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -67,6 +64,7 @@ return packer.startup(function(use)
    -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  use "jose-elias-alvarez/null-ls.nvim"
 
 -- Telescope
   use "nvim-telescope/telescope.nvim"

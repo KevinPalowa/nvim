@@ -6,3 +6,4 @@ end
 
 require("kevin.lsp.lsp-installer")
 require("kevin.lsp.handlers").setup()
+require("kevin.lsp.null-ls")
