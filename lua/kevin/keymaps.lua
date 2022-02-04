@@ -1,4 +1,3 @@
-
 local opts = { noremap = true, silent = true }
 
 local term_opts = { silent = true }
@@ -67,9 +66,18 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+keymap(
+	"n",
+	"<leader>f",
+	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
+	opts
+)
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<C-f>", ":lua vim.lsp.buf.formatting()<cr>", opts)
+keymap("n", "<C-w>", ":Bdelete<cr>", opts)
+-- keymap("v", "<C-_>", "gc", opts)
+keymap("n", "<C-a>", "gg<S-v>G", opts)
+keymap("n", "<C-s>", ":w<cr>", opts)
