@@ -60,13 +60,14 @@ return packer.startup(function(use)
 	}) -- alpha
 	use("ahmedkhalf/project.nvim") -- project
 	use("kyazdani42/nvim-tree.lua") -- nvim Tree
-
+	use("norcalli/nvim-colorizer.lua")
 	-- Color Scheme
 	use("folke/tokyonight.nvim")
 	use("olimorris/onedarkpro.nvim")
 	use("shaunsingh/nord.nvim")
 	use("navarasu/onedark.nvim")
 	use("EdenEast/nightfox.nvim")
+	use("rmehri01/onenord.nvim")
 
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin

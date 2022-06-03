@@ -1,7 +1,4 @@
--- local onedarkpro = require("nightfox")
--- onedarkpro.setup({})
--- onedarkpro.load("nordfox")
-local colorscheme = "onedark"
+local colorscheme = "tokyonight"
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
 	vim.notify("colorscheme " .. colorscheme .. " not found!")
