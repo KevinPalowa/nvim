@@ -61,10 +61,10 @@ return packer.startup(function(use)
 	use("ahmedkhalf/project.nvim") -- project
 	use("kyazdani42/nvim-tree.lua") -- nvim Tree
 	use("norcalli/nvim-colorizer.lua")
-use {
-  'romgrk/barbar.nvim',
-  requires = {'kyazdani42/nvim-web-devicons'}
-}
+	use({
+		"romgrk/barbar.nvim",
+		requires = { "kyazdani42/nvim-web-devicons" },
+	})
 	-- Color Scheme
 	use("folke/tokyonight.nvim")
 	use("olimorris/onedarkpro.nvim")
@@ -72,9 +72,8 @@ use {
 	use("navarasu/onedark.nvim")
 	use("EdenEast/nightfox.nvim")
 	use("rmehri01/onenord.nvim")
-	use("https://github.com/morhetz/gruvbox")
+	use("morhetz/gruvbox")
 
-	use("https://github.com/dstein64/vim-startuptime")
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
 	use("hrsh7th/cmp-buffer") -- buffer completions
