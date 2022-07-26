@@ -60,11 +60,8 @@ return packer.startup(function(use)
 	}) -- alpha
 	use("ahmedkhalf/project.nvim") -- project
 	use("kyazdani42/nvim-tree.lua") -- nvim Tree
+	use("folke/which-key.nvim")
 	use("norcalli/nvim-colorizer.lua")
-	use({
-		"romgrk/barbar.nvim",
-		requires = { "kyazdani42/nvim-web-devicons" },
-	})
 	-- Color Scheme
 	use("folke/tokyonight.nvim")
 	use("olimorris/onedarkpro.nvim")
@@ -102,6 +99,8 @@ return packer.startup(function(use)
 		run = ":TSUpdate",
 	})
 	use("p00f/nvim-ts-rainbow")
+
+	use("windwp/nvim-ts-autotag")
 
 	-- lualine
 	use({

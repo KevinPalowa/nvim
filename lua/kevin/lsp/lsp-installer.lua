@@ -11,14 +11,14 @@ lsp_installer.on_server_ready(function(server)
 		capabilities = require("kevin.lsp.handlers").capabilities,
 	}
 
-	-- if server.name == "emmet_ls" then
-	-- 	local emmetls_opts = require("kevin.lsp.settings.emmetls")
-	-- 	opts = vim.tbl_deep_extend("force", emmetls_opts, opts)
-	-- end
-	-- if server.name == "jsonls" then
-	-- 	local jsonls_opts = require("kevin.lsp.settings.jsonls")
-	-- 	opts = vim.tbl_deep_extend("force", jsonls_opts, opts)
-	-- end
+	if server.name == "emmet_ls" then
+		local emmetls_opts = require("kevin.lsp.settings.emmetls")
+		opts = vim.tbl_deep_extend("force", emmetls_opts, opts)
+	end
+	if server.name == "jsonls" then
+		local jsonls_opts = require("kevin.lsp.settings.jsonls")
+		opts = vim.tbl_deep_extend("force", jsonls_opts, opts)
+	end
 	if server.name == "sumneko_lua" then
 		local sumneko_opts = require("kevin.lsp.settings.sumneko_lua")
 		opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
