@@ -62,6 +62,17 @@ return packer.startup(function(use)
 	use("kyazdani42/nvim-tree.lua") -- nvim Tree
 	use("folke/which-key.nvim")
 	use("norcalli/nvim-colorizer.lua")
+	use({
+		"folke/trouble.nvim",
+		requires = "kyazdani42/nvim-web-devicons",
+		config = function()
+			require("trouble").setup({
+				-- your configuration comes here
+				-- or leave it empty to use the default settings
+				-- refer to the configuration section below
+			})
+		end,
+	})
 	-- Color Scheme
 	use("folke/tokyonight.nvim")
 	use("olimorris/onedarkpro.nvim")
@@ -70,6 +81,7 @@ return packer.startup(function(use)
 	use("EdenEast/nightfox.nvim")
 	use("rmehri01/onenord.nvim")
 	use("morhetz/gruvbox")
+	use("glepnir/zephyr-nvim")
 
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin

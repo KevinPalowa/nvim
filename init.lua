@@ -1,4 +1,5 @@
 require("kevin.options")
+require("kevin.autocmds")
 require("kevin.keymaps")
 require("kevin.plugins")
 require("kevin.colorscheme")
