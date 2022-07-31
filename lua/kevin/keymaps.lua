@@ -37,6 +37,10 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
+-- General
+keymap("n", "<C-a>", "gg<S-v>G", opts)
+keymap("n", "<C-s>", ":w<cr>", opts)
+
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
@@ -79,5 +83,14 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<C-f>", ":lua vim.lsp.buf.formatting()<cr>", opts)
 keymap("n", "<C-w>", ":Bdelete<cr>", opts)
 -- keymap("v", "<C-_>", "gc", opts)
-keymap("n", "<C-a>", "gg<S-v>G", opts)
-keymap("n", "<C-s>", ":w<cr>", opts)
+
+-- LspSaga
+keymap("n", "gh", "<cmd>Lspsaga lsp_finder<cr>", opts)
+keymap("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts)
+keymap("v", "<leader>ca", "<cmd><C-U>Lspsaga range_code_action<CR>", opts)
+keymap("n", "gs", "<Cmd>Lspsaga signature_help<CR>", opts)
+keymap("n", "gr", "<cmd>Lspsaga rename<CR>", opts)
+keymap("n", "gl", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
+keymap("n", "[e", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
+keymap("n", "]e", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
+-- keymap("n", "gd", "<cmd>Lspsaga preview_definition<CR>", opts)
