@@ -75,14 +75,13 @@ return packer.startup(function(use)
 	})
 	-- Color Scheme
 	use("folke/tokyonight.nvim")
-	use("olimorris/onedarkpro.nvim")
 	use("shaunsingh/nord.nvim")
 	use("navarasu/onedark.nvim")
 	use("EdenEast/nightfox.nvim")
 	use("rmehri01/onenord.nvim")
 	use("morhetz/gruvbox")
 	use("glepnir/zephyr-nvim")
-
+	use({ "catppuccin/nvim" })
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
 	use("hrsh7th/cmp-buffer") -- buffer completions

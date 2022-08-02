@@ -14,12 +14,8 @@ configs.setup({
 	indent = { enable = true, disable = { "yaml" } },
 	rainbow = {
 		enable = true,
-		-- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
-		colors = {
-			"#68a0b0",
-			"#946EaD",
-			"#c7aA6D",
-		},
+		extended_mode = true,
+		disable = { "tsx" },
 		-- colors = {}, -- table of hex strings
 		-- termcolors = {} -- table of colour name strings
 	},
