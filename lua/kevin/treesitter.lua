@@ -14,8 +14,8 @@ configs.setup({
 	indent = { enable = true, disable = { "yaml" } },
 	rainbow = {
 		enable = true,
-		extended_mode = true,
-		disable = { "tsx" },
+		extended_mode = false,
+		-- disable = { "tsx" },
 		-- colors = {}, -- table of hex strings
 		-- termcolors = {} -- table of colour name strings
 	},

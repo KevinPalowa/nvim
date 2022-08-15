@@ -82,7 +82,7 @@ return packer.startup(function(use)
 	use("morhetz/gruvbox")
 	use("glepnir/zephyr-nvim")
 	use({ "catppuccin/nvim" })
-	use("lunarvim/synthwave84.nvim")
+	use({ "Everblush/everblush.nvim", as = "everblush" })
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
 	use("hrsh7th/cmp-buffer") -- buffer completions
