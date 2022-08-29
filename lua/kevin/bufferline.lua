@@ -10,7 +10,7 @@ bufferline.setup({
 		right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
 		left_mouse_command = "buffer %d", -- can be a string | function, see "Mouse actions"
 		middle_mouse_command = nil, -- can be a string | function, see "Mouse actions"
-		indicator_icon = "│",
+		indicator_style = "│",
 		buffer_close_icon = "",
 		modified_icon = "●",
 		close_icon = "",
@@ -32,23 +32,22 @@ bufferline.setup({
 		always_show_bufferline = true,
 	},
 	highlights = {
-		--[[ 		separator = {
+		separator = {
 			fg = "#232a2d",
-			bg = "#232a2d",
 		},
 		separator_selected = {
-			fg = "fg",
+			fg = "#232a2d",
 		},
-		background = {
-			fg = "fg",
-			bg = "#232a2d",
-		},
-		buffer_selected = {
-			fg = "fg",
-			bold = true,
-		},
+		--[[ background = { ]]
+		--[[ 	fg = "fg", ]]
+		--[[ 	bg = "#232a2d", ]]
+		--[[ }, ]]
+		--[[ buffer_selected = { ]]
+		--[[ 	fg = "fg", ]]
+		--[[ 	bold = true, ]]
+		--[[ }, ]]
 		fill = {
 			bg = "#232a2d",
-		}, ]]
+		},
 	},
 })
