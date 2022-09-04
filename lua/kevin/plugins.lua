@@ -104,6 +104,9 @@ return packer.startup(function(use)
 	use("williamboman/nvim-lsp-installer") -- simple to use language server installer
 	use("jose-elias-alvarez/null-ls.nvim")
 	use({
+		"ray-x/lsp_signature.nvim",
+	})
+	use({
 		"glepnir/lspsaga.nvim",
 		branch = "main",
 		config = function()
