@@ -4,5 +4,6 @@ if not status_ok then
 end
 
 require("kevin.lsp.lsp-installer")
+--[[ require("kevin.lsp.mason") ]]
 require("kevin.lsp.handlers").setup()
 require("kevin.lsp.null-ls")
