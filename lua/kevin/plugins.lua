@@ -117,6 +117,12 @@ return packer.startup(function(use)
 			})
 		end,
 	})
+	use({
+		"j-hui/fidget.nvim",
+		config = function()
+			require("fidget").setup({})
+		end,
+	})
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
