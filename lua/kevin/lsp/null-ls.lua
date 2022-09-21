@@ -11,7 +11,7 @@ local sources = {
 	-- formatting.eslint,
 	formatting.prettier,
 	formatting.stylua,
-	diagnostics.eslint,
+	--[[ diagnostics.eslint, ]]
 }
 null_ls.setup({
 	debug = false,
