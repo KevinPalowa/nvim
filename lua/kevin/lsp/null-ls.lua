@@ -9,7 +9,7 @@ local diagnostics = null_ls.builtins.diagnostics
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
 local sources = {
 	-- formatting.eslint,
-	formatting.prettier,
+	formatting.prettierd,
 	formatting.stylua,
 	--[[ diagnostics.eslint, ]]
 }
