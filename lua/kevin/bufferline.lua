@@ -27,16 +27,16 @@ bufferline.setup({
 		show_close_icon = true,
 		show_tab_indicators = true,
 		persist_buffer_sort = true, -- whether or not custom sorted buffers should persist
-		separator_style = "slant", -- | "thick" | "thin" | { 'any', 'any' },
+		separator_style = "thick", -- | "thick" | "thin" | { 'any', 'any' },
 		enforce_regular_tabs = true,
 		always_show_bufferline = true,
 	},
 	highlights = {
 		separator = {
-			fg = "#232a2d",
+			fg = "#131822",
 		},
 		separator_selected = {
-			fg = "#232a2d",
+			fg = "#131822",
 		},
 		--[[ background = { ]]
 		--[[ 	fg = "fg", ]]
@@ -47,7 +47,7 @@ bufferline.setup({
 		--[[ 	bold = true, ]]
 		--[[ }, ]]
 		fill = {
-			bg = "#232a2d",
+			bg = "#131822",
 		},
 	},
 })
