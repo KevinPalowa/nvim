@@ -73,6 +73,7 @@ return packer.startup(function(use)
 			})
 		end,
 	})
+
 	-- Color Scheme
 	use("folke/tokyonight.nvim")
 	use("shaunsingh/nord.nvim")
