@@ -58,7 +58,6 @@ return packer.startup(function(use)
 		"goolord/alpha-nvim",
 		requires = { "kyazdani42/nvim-web-devicons" },
 	}) -- alpha
-	use("ahmedkhalf/project.nvim") -- project
 	use("kyazdani42/nvim-tree.lua") -- nvim Tree
 	use("folke/which-key.nvim")
 	use("norcalli/nvim-colorizer.lua")
