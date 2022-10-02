@@ -11,13 +11,13 @@ local sources = {
 	-- formatting.eslint,
 	formatting.prettierd,
 	formatting.stylua,
-	--[[ diagnostics.eslint, ]]
+	--[[ diagnostics.eslint_d, ]]
 }
 null_ls.setup({
 	debug = false,
 	sources = sources,
 	on_attach = function(client)
-		if client.resolved_capabilities.document_formatting then
+		if client.server_capabilities.documentFormattingProvider then
 			vim.cmd([[
             augroup LspFormatting
                 autocmd! * <buffer>
