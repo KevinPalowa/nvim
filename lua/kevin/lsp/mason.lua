@@ -8,7 +8,15 @@ if not status_ok_1 then
 	return
 end
 
-mason.setup()
+mason.setup({
+	ui = {
+		icons = {
+			package_installed = "✓",
+			package_pending = "➜",
+			package_uninstalled = "✗",
+		},
+	},
+})
 mason_lspconfig.setup({
 	automatic_installation = true,
 })
