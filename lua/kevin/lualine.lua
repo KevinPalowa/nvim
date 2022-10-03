@@ -1,11 +1,23 @@
-require("lualine").setup({
+local status_ok, lualine = pcall(require, "lualine")
+if not status_ok then
+	return
+end
+local function server()
+	local clients = vim.lsp.buf_get_clients()
+	local client_names = {}
+	for _, client in pairs(clients) do
+		table.insert(client_names, client.name)
+	end
+	return table.concat(client_names, ", ")
+end
+lualine.setup({
 	options = {
 		icons_enabled = true,
 		theme = "catppuccin",
 		component_separators = { left = "|", right = "|" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = {
-			statusline = {},
+			statusline = { "alpha", "TelescopePrompt", "NvimTree", "mason",'lspinfo' },
 			winbar = {},
 		},
 		ignore_focus = {},
