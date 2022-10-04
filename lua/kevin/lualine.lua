@@ -8,7 +8,8 @@ local function server()
 	for _, client in pairs(clients) do
 		table.insert(client_names, client.name)
 	end
-	return table.concat(client_names, ", ")
+	local result = table.concat(client_names, ", ")
+	return result
 end
 lualine.setup({
 	options = {
@@ -17,7 +18,7 @@ lualine.setup({
 		component_separators = { left = "|", right = "|" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = {
-			statusline = { "alpha", "TelescopePrompt", "NvimTree", "mason",'lspinfo' },
+			statusline = { "alpha", "TelescopePrompt", "NvimTree", "mason", "lspinfo" },
 			winbar = {},
 		},
 		ignore_focus = {},
@@ -33,8 +34,8 @@ lualine.setup({
 		lualine_a = { "mode" },
 		lualine_b = { "branch", "diff", "diagnostics" },
 		lualine_c = { "filename" },
-		lualine_x = { "encoding", "filetype" },
-		lualine_y = {},
+		lualine_x = {  },
+		lualine_y = { "filetype" },
 		lualine_z = { "location" },
 	},
 	inactive_sections = {

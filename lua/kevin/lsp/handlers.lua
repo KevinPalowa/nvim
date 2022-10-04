@@ -88,6 +88,9 @@ M.on_attach = function(client, bufnr)
 	if client.name == "jsonls" then
 		client.server_capabilities.documentFormattingProvider = false
 	end
+	if client.name == "html" then
+		client.server_capabilities.documentFormattingProvider = false
+	end
 	lsp_keymaps(bufnr)
 	lsp_highlight_document(client)
 end
@@ -100,5 +103,4 @@ if not status_ok then
 end
 
 M.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
-
 return M

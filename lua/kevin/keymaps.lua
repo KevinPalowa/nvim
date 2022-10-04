@@ -76,17 +76,16 @@ keymap(
 	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
 	opts
 )
-keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
+--[[ keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts) ]]
 
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
-keymap("n", "<C-f>", ":lua vim.lsp.buf.formatting()<cr>", opts)
+
 keymap("n", "<C-w>", ":Bdelete<cr>", opts)
 -- keymap("v", "<C-_>", "gc", opts)
 
 -- LspSaga
 keymap("n", "gh", "<cmd>Lspsaga lsp_finder<cr>", opts)
-keymap("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts)
 keymap("v", "<leader>ca", "<cmd><C-U>Lspsaga range_code_action<CR>", opts)
 keymap("n", "gs", "<Cmd>Lspsaga signature_help<CR>", opts)
 keymap("n", "gr", "<cmd>Lspsaga rename<CR>", opts)
