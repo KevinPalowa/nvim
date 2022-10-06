@@ -19,6 +19,7 @@ mason.setup({
 })
 mason_lspconfig.setup({
 	automatic_installation = true,
+	ensure_installed = { "sumneko_lua", "jsonls", "tsserver" },
 })
 
 local lspconfig_status_ok, lspconfig = pcall(require, "lspconfig")
