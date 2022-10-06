@@ -72,6 +72,7 @@ return packer.startup(function(use)
 			})
 		end,
 	})
+	use("wakatime/vim-wakatime") -- WakaTime
 
 	-- Color Scheme
 	use("folke/tokyonight.nvim")
