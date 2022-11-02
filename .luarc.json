@@ -3,5 +3,9 @@
     "Lua.diagnostics.disable": [
         "unused-local",
         "redefined-local"
+    ],
+    "Lua.diagnostics.globals": [
+        "vim",
+        "s"
     ]
 }

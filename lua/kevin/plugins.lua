@@ -73,7 +73,24 @@ return packer.startup(function(use)
 		end,
 	})
 	use("wakatime/vim-wakatime") -- WakaTime
-
+	use({
+		"folke/todo-comments.nvim",
+		config = function()
+			require("todo-comments").setup({
+				-- your configuration comes here
+				-- or leave it empty to use the default settings
+				-- refer to the configuration section below
+			})
+		end,
+	})
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = "cd app && npm install",
+		setup = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
+	})
 	-- Color Scheme
 	use("folke/tokyonight.nvim")
 	use("shaunsingh/nord.nvim")
@@ -136,6 +153,7 @@ return packer.startup(function(use)
 	use("p00f/nvim-ts-rainbow")
 
 	use("windwp/nvim-ts-autotag")
+	use("nvim-treesitter/playground")
 
 	-- lualine
 	use({

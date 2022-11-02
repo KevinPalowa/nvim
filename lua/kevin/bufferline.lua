@@ -31,23 +31,5 @@ bufferline.setup({
 		enforce_regular_tabs = true,
 		always_show_bufferline = true,
 	},
-	highlights = {
-		separator = {
-			fg = "#131822",
-		},
-		separator_selected = {
-			fg = "#131822",
-		},
-		--[[ background = { ]]
-		--[[ 	fg = "fg", ]]
-		--[[ 	bg = "#232a2d", ]]
-		--[[ }, ]]
-		--[[ buffer_selected = { ]]
-		--[[ 	fg = "fg", ]]
-		--[[ 	bold = true, ]]
-		--[[ }, ]]
-		fill = {
-			bg = "#131822",
-		},
-	},
+	highlights = require("catppuccin.groups.integrations.bufferline").get(),
 })

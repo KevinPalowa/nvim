@@ -14,7 +14,7 @@ require("kevin.comment")
 require("kevin.gitsigns")
 require("kevin.nvimtree")
 require("kevin.treesitter")
---[[ require("kevin.bufferline") ]]
+require("kevin.bufferline")
 require("kevin.indentline")
 require("kevin.alpha")
 require("kevin.project")
