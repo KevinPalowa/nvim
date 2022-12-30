@@ -97,12 +97,13 @@ local mappings = {
 	["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 
 	p = {
-		name = "Packer",
-		c = { "<cmd>PackerCompile<cr>", "Compile" },
-		i = { "<cmd>PackerInstall<cr>", "Install" },
-		s = { "<cmd>PackerSync<cr>", "Sync" },
-		S = { "<cmd>PackerStatus<cr>", "Status" },
-		u = { "<cmd>PackerUpdate<cr>", "Update" },
+		name = "Plugin",
+		c = { "<cmd>Lazy check<cr>", "Check Update" },
+		C = { "<cmd>Lazy check<cr>", "Clean plugins that are no longer needed" },
+		i = { "<cmd>Lazy install<cr>", "Install" },
+		s = { "<cmd>Lazy sync<cr>", "Sync" },
+		S = { "<cmd>Lazy home<cr>", "Status" },
+		u = { "<cmd>Lazy update<cr>", "Update" },
 	},
 
 	g = {
