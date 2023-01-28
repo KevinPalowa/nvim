@@ -17,7 +17,7 @@ local plugins = {
 	"wbthomason/packer.nvim", -- Have packer manage itself
 	"nvim-lua/popup.nvim", -- An implementation of the Popup API from vim in Neovim
 	"nvim-lua/plenary.nvim", -- Useful lua functions used ny lots of plugins
-	"andweeb/presence.nvim", -- Discord presence
+	--[[ "andweeb/presence.nvim", -- Discord presence ]]
 	"akinsho/toggleterm.nvim", -- Toggle Term
 	"windwp/nvim-autopairs", -- autoPairs
 	{
