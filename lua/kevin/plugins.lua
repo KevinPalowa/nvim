@@ -138,6 +138,7 @@ local plugins = {
 
 	-- bufferline
 	{ "akinsho/bufferline.nvim", dependencies = "kyazdani42/nvim-web-devicons" },
+	{ "nvim-pack/nvim-spectre", dependencies = "nvim-lua/plenary.nvim" },
 	"moll/vim-bbye",
 
 	{
