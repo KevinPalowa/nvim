@@ -78,9 +78,12 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 keymap(
 	"n",
 	"<leader>f",
-	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
+	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false ,hidden=true},file_ignore_patterns = {'.git', 'vendor', 'node_modules'}))<cr>",
 	opts
 )
+
+keymap("n", "<leader>sw", "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", opts)
+keymap("n", "<leader>r", "<cmd>lua require('spectre').open()<CR>", opts)
 --[[ keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts) ]]
 
 -- Nvimtree

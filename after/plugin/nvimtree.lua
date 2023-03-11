@@ -10,7 +10,27 @@ local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
 if not config_status_ok then
 	return
 end
+local function custom_callback(callback_name)
+	return string.format(":lua require('kevin.treeutils').%s()<CR>", callback_name)
+end
 
+local lib = require("nvim-tree.lib")
+
+local git_add = function()
+	local node = lib.get_node_at_cursor()
+	local gs = node.git_status.file
+
+	-- If the file is untracked, unstaged or partially staged, we stage it
+	if gs == "??" or gs == "MM" or gs == "AM" or gs == " M" then
+		vim.cmd("silent !git add " .. node.absolute_path)
+
+	-- If the file is staged, we unstage
+	elseif gs == "M " or gs == "A " then
+		vim.cmd("silent !git restore --staged " .. node.absolute_path)
+	end
+
+	lib.refresh_tree()
+end
 -- Replaces auto_close
 local tree_cb = nvim_tree_config.nvim_tree_callback
 vim.api.nvim_create_autocmd("BufEnter", {
@@ -121,9 +141,12 @@ nvim_tree.setup({
 		mappings = {
 			custom_only = false,
 			list = {
+				{ key = "<c-f>", cb = custom_callback("launch_find_files") },
+				{ key = "<c-g>", cb = custom_callback("launch_live_grep") },
 				{ key = { "l", "<CR>", "o" }, cb = tree_cb("edit") },
 				{ key = "h", cb = tree_cb("close_node") },
 				{ key = "v", cb = tree_cb("vsplit") },
+				{ key = "ga", action = "git_add", action_cb = git_add },
 			},
 		},
 		number = false,

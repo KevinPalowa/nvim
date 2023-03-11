@@ -96,13 +96,9 @@ local plugins = {
 	"ray-x/lsp_signature.nvim",
 	{
 		"glepnir/lspsaga.nvim",
-		branch = "main",
+		event = "BufRead",
 		config = function()
-			local saga = require("lspsaga")
-
-			saga.init_lsp_saga({
-				-- your configuration
-			})
+			require("lspsaga").setup({})
 		end,
 	},
 	{

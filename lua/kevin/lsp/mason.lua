@@ -19,13 +19,16 @@ mason.setup({
 })
 mason_lspconfig.setup({
 	automatic_installation = true,
-	ensure_installed = { "sumneko_lua", "jsonls", "tsserver" },
+	ensure_installed = { "lua_ls", "jsonls", "tsserver" },
 })
 
 local lspconfig_status_ok, lspconfig = pcall(require, "lspconfig")
 if not lspconfig_status_ok then
 	return
 end
+lspconfig.dartls.setup({
+	cmd = { "/opt/flutter/bin/dart", "language-server", "--protocol=lsp" },
+})
 mason_lspconfig.setup_handlers({
 	-- This is a default handler that will be called for each installed server (also for new servers that are installed during a session)
 	function(server_name)
