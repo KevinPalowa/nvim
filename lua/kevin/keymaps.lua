@@ -86,8 +86,8 @@ keymap("n", "<leader>sw", "<cmd>lua require('spectre').open_visual({select_word=
 keymap("n", "<leader>r", "<cmd>lua require('spectre').open()<CR>", opts)
 --[[ keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts) ]]
 
--- Nvimtree
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+-- neotree
+keymap("n", "<leader>e", ":NeoTreeFocusToggle<cr>", opts)
 
 keymap("n", "<C-w>", ":Bdelete<cr>", opts)
 -- keymap("v", "<C-_>", "gc", opts)
