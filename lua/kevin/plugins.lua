@@ -31,9 +31,16 @@ local plugins = {
 		"goolord/alpha-nvim",
 		dependencies = { "kyazdani42/nvim-web-devicons" },
 	}, -- alpha
-	"kyazdani42/nvim-tree.lua", -- nvim Tree
 	"folke/which-key.nvim",
 	"norcalli/nvim-colorizer.lua",
+	{
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v2.x",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"MunifTanjim/nui.nvim",
+		},
+	},
 	{
 		"folke/trouble.nvim",
 		dependencies = "kyazdani42/nvim-web-devicons",

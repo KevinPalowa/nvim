@@ -10,7 +10,7 @@ vim.g.indent_blankline_filetype_exclude = {
 	"dashboard",
 	"packer",
 	"neogitstatus",
-	"NvimTree",
+	"neo-tree",
 	"Trouble",
 }
 vim.g.indentLine_enabled = 1

@@ -12,11 +12,11 @@ require("catppuccin").setup({
 	integrations = {
 		ts_rainbow = true,
 		lsp_saga = true,
-		nvimtree = true,
 		treesitter = true,
 		treesitter_context = true,
 		telescope = true,
 		which_key = true,
+		neotree = true,
 	},
 	custom_highlights = {
 		["@constructor.tsx"] = { fg = colors.peach },
