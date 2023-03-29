@@ -105,13 +105,21 @@ local plugins = {
 		"glepnir/lspsaga.nvim",
 		event = "BufRead",
 		config = function()
-			require("lspsaga").setup({})
+			require("lspsaga").setup({
+				ui = {
+					kind = require("catppuccin.groups.integrations.lsp_saga").custom_kind(),
+				},
+			})
 		end,
 	},
 	{
 		"j-hui/fidget.nvim",
 		config = function()
-			require("fidget").setup({})
+			require("fidget").setup({
+				window = {
+					blend = 0,
+				},
+			})
 		end,
 	},
 

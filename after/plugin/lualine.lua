@@ -18,7 +18,7 @@ lualine.setup({
 		component_separators = { left = "|", right = "|" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = {
-			statusline = { "alpha", "TelescopePrompt", "neo-tree", "mason", "lspinfo" },
+			statusline = { "alpha", "TelescopePrompt", "neo-tree", "mason", "lspinfo", "spectre_panel" },
 			winbar = {},
 		},
 		ignore_focus = {},
