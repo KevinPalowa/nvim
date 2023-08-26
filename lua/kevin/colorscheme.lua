@@ -7,7 +7,7 @@
 vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
 local colors = require("catppuccin.palettes").get_palette()
 require("catppuccin").setup({
-	transparent_background = true,
+	--[[ transparent_background = true, ]]
 	styles = {},
 	integrations = {
 		ts_rainbow = true,
@@ -21,6 +21,8 @@ require("catppuccin").setup({
 		mason = true,
 		cmp = true,
 		lsp_trouble = true,
+		noice = true,
+		notify = true,
 	},
 	--[[ custom_highlights = { ]]
 	--[[ 	["@constructor.tsx"] = { fg = colors.peach }, ]]

@@ -17,14 +17,4 @@ local sources = {
 null_ls.setup({
 	debug = false,
 	sources = sources,
-	on_attach = function(client)
-		if client.server_capabilities.documentFormattingProvider then
-			vim.cmd([[
-            augroup LspFormatting
-                autocmd! * <buffer>
-                autocmd BufWritePre <buffer> lua vim.lsp.buf.format {async = false}
-            augroup END
-            ]])
-		end
-	end,
 })

@@ -27,12 +27,53 @@ local plugins = {
 		},
 	}, -- gitSign
 	"lukas-reineke/indent-blankline.nvim", -- indentline
+	{ "sindrets/diffview.nvim", dependencies = "nvim-lua/plenary.nvim" },
+  "jose-elias-alvarez/typescript.nvim",
+	--[[ { ]]
+	--[[ 	"pmizio/typescript-tools.nvim", ]]
+	--[[ 	dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" }, ]]
+	--[[ 	config = function() ]]
+	--[[ 		require("typescript-tools").setup({}) ]]
+	--[[ 	end, ]]
+	--[[ }, ]]
 	{
 		"goolord/alpha-nvim",
+		event = "VimEnter",
 		dependencies = { "kyazdani42/nvim-web-devicons" },
 	}, -- alpha
 	"folke/which-key.nvim",
 	"norcalli/nvim-colorizer.lua",
+	{
+		--[[ "folke/noice.nvim", ]]
+		--[[ config = function() ]]
+		--[[ 	require("noice").setup({ ]]
+		--[[ 		lsp = { ]]
+		--[[ 			-- override markdown rendering so that **cmp** and other plugins use **Treesitter** ]]
+		--[[ 			override = { ]]
+		--[[ 				["vim.lsp.util.convert_input_to_markdown_lines"] = true, ]]
+		--[[ 				["vim.lsp.util.stylize_markdown"] = true, ]]
+		--[[ 				["cmp.entry.get_documentation"] = true, ]]
+		--[[ 			}, ]]
+		--[[ 		}, ]]
+		--[[ 		-- you can enable a preset for easier configuration ]]
+		--[[ 		presets = { ]]
+		--[[ 			bottom_search = true, -- use a classic bottom cmdline for search ]]
+		--[[ 			command_palette = true, -- position the cmdline and popupmenu together ]]
+		--[[ 			long_message_to_split = true, -- long messages will be sent to a split ]]
+		--[[ 			inc_rename = false, -- enables an input dialog for inc-rename.nvim ]]
+		--[[ 			lsp_doc_border = false, -- add a border to hover docs and signature help ]]
+		--[[ 		}, ]]
+		--[[ 	}) ]]
+		--[[ end, ]]
+		--[[ dependencies = { ]]
+		--[[ 	-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries ]]
+		--[[ 	"MunifTanjim/nui.nvim", ]]
+		--[[ 	-- OPTIONAL: ]]
+		--[[ 	--   `nvim-notify` is only needed, if you want to use the notification view. ]]
+		--[[ 	--   If not available, we use `mini` as the fallback ]]
+		--[[ 	"rcarriga/nvim-notify", ]]
+		--[[ }, ]]
+	},
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v2.x",
@@ -114,6 +155,7 @@ local plugins = {
 	},
 	{
 		"j-hui/fidget.nvim",
+		branch = "legacy",
 		config = function()
 			require("fidget").setup({
 				window = {

@@ -12,13 +12,14 @@ configs.setup({
 		additional_vim_regex_highlighting = true,
 	},
 	indent = { enable = true, disable = { "yaml" } },
-	rainbow = {
-		enable = true,
-		extended_mode = false,
-		-- disable = { "tsx" },
-		-- colors = {}, -- table of hex strings
-		-- termcolors = {} -- table of colour name strings
-	},
+  --[[ NOTE: This plugin make error when i open tsx file ]]
+	--[[ rainbow = { ]]
+	--[[ 	enable = true, ]]
+	--[[ 	extended_mode = false, ]]
+	--[[ 	-- disable = { "tsx" }, ]]
+	--[[ 	-- colors = {}, -- table of hex strings ]]
+	--[[ 	-- termcolors = {} -- table of colour name strings ]]
+	--[[ }, ]]
 	context_commentstring = {
 		enable = true,
 		enable_autocmd = false,
