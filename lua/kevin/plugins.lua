@@ -28,7 +28,7 @@ local plugins = {
 	}, -- gitSign
 	"lukas-reineke/indent-blankline.nvim", -- indentline
 	{ "sindrets/diffview.nvim", dependencies = "nvim-lua/plenary.nvim" },
-  "jose-elias-alvarez/typescript.nvim",
+	"jose-elias-alvarez/typescript.nvim",
 	--[[ { ]]
 	--[[ 	"pmizio/typescript-tools.nvim", ]]
 	--[[ 	dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" }, ]]
@@ -141,7 +141,10 @@ local plugins = {
 	"williamboman/mason-lspconfig.nvim",
 	"williamboman/mason.nvim",
 	"jose-elias-alvarez/null-ls.nvim",
-	"ray-x/lsp_signature.nvim",
+	{
+		"ray-x/lsp_signature.nvim",
+		event = "VeryLazy",
+	},
 	{
 		"glepnir/lspsaga.nvim",
 		event = "BufRead",
