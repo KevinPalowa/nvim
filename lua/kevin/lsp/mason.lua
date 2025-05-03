@@ -19,7 +19,7 @@ mason.setup({
 })
 mason_lspconfig.setup({
 	automatic_installation = true,
-	ensure_installed = { "lua_ls", "jsonls", "tsserver" },
+	ensure_installed = { "lua_ls", "jsonls", "ts_ls" },
 })
 
 local lspconfig_status_ok, lspconfig = pcall(require, "lspconfig")
@@ -47,6 +47,25 @@ mason_lspconfig.setup_handlers({
 		end
 		if server_name == "sumneko_lua" then
 			local sumneko_opts = require("kevin.lsp.settings.sumneko_lua")
+			opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
+		end
+
+		if server_name == "ts_ls" then
+local vue_typescript_plugin_path = vim.fn.stdpath('data')
+      .. '/mason/packages/vue-language-server/node_modules/@vue/language-server/node_modules/@vue/typescript-plugin'
+			local sumneko_opts ={
+        init_options = {
+          plugins = {
+            {
+              name = '@vue/typescript-plugin',
+  location =vue_typescript_plugin_path,
+              languages = { 'vue' },
+            },
+          },
+        },
+        filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
+        single_file_support = false,
+      } 
 			opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
 		end
 

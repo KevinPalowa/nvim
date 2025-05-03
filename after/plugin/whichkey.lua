@@ -84,10 +84,9 @@ local mappings = {
 		"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
 		"Buffers",
 	},
-	["e"] = { "<cmd>NeoTreeRevealToggle<cr>", "Explorer" },
+	["e"] = { "<cmd>Neotree toggle<cr>", "Explorer" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
 	["q"] = { "<cmd>q!<CR>", "Quit" },
-	["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
 	["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
 	["f"] = {
 		"<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false}) <cr>",
@@ -96,6 +95,12 @@ local mappings = {
 	["F"] = { "<cmd>Telescope live_grep<cr>", "Find Text" },
 	["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 
+	c = {
+		name = "Copilot",
+		c = { "<cmd>CopilotChatToggle <cr>", "Copilot Toggle" },
+		e = { "<cmd>CopilotChatExplain <cr>", "Copilot Explain" },
+		f = { "<cmd>CopilotChatFix <cr>", "Copilot Fix" },
+	},
 	p = {
 		name = "Plugin",
 		c = { "<cmd>Lazy check<cr>", "Check Update" },

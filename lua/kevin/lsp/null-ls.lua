@@ -12,7 +12,7 @@ local sources = {
 	formatting.shfmt,
 	formatting.prettierd,
 	formatting.stylua,
-	--[[ diagnostics.eslint_d, ]]
+	diagnostics.eslint_d,
 }
 null_ls.setup({
 	debug = false,
