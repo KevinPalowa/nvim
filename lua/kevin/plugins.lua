@@ -115,7 +115,6 @@ local plugins = {
 			})
 		end,
 	},
-	"wakatime/vim-wakatime", -- WakaTime,
 	{
 		"folke/todo-comments.nvim",
 		config = function()
