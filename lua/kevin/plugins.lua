@@ -17,6 +17,7 @@ local plugins = {
 	--[[ "andweeb/presence.nvim", -- Discord presence ]]
 	"akinsho/toggleterm.nvim", -- Toggle Term
 	"windwp/nvim-autopairs", -- autoPairs
+	"tpope/vim-fugitive", -- Git commands in nvim
 	{
 		"lewis6991/gitsigns.nvim",
 		dependencies = {
@@ -158,7 +159,43 @@ local plugins = {
 	"neovim/nvim-lspconfig", -- enable LSP
 	"williamboman/mason-lspconfig.nvim",
 	"williamboman/mason.nvim",
-	"jose-elias-alvarez/null-ls.nvim",
+	{
+		"akinsho/flutter-tools.nvim",
+		ft = { "dart" },
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"stevearc/dressing.nvim",
+		},
+		config = function()
+			local ok, flutter_tools = pcall(require, "flutter-tools")
+			if not ok then
+				return
+			end
+			local handlers = require("kevin.lsp.handlers")
+			flutter_tools.setup({
+				ui = {
+					border = "rounded",
+					notification_style = "plugin",
+				},
+				decorations = {
+					statusline = {
+						app_version = true,
+						device = true,
+					},
+				},
+				widget_guides = { enabled = true },
+				lsp = {
+					color = {
+						enabled = true,
+						background = true,
+						virtual_text = true,
+					},
+					on_attach = handlers.on_attach,
+					capabilities = handlers.capabilities,
+				},
+			})
+		end,
+	},
 	{
 		"ray-x/lsp_signature.nvim",
 		event = "VeryLazy",
