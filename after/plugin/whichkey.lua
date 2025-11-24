@@ -91,6 +91,7 @@ local mappings = {
 		{ "<leader>ll", "<cmd>lua vim.lsp.codelens.run()<cr>", desc = "CodeLens Action" },
 		{ "<leader>lq", "<cmd>lua vim.diagnostic.setloclist()<cr>", desc = "Quickfix" },
 		{ "<leader>lr", "<cmd>Lspsaga rename<CR>", desc = "Rename" },
+		{ "<leader>lR", "<cmd>Telescope lsp_references<CR>", desc = "References" },
 		{ "<leader>ls", "<cmd>Telescope lsp_document_symbols<cr>", desc = "Document Symbols" },
 		{
 			"<leader>lS",
